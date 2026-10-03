@@ -29,7 +29,7 @@ With the numbers in the screenshot (216k tokens on Opus 5.5):
 | within 56 minutes | warm | about $0.04 (cache read, $0.20 per 1M tokens) |
 | after 56 minutes | cold | about $1.73 (cache write, $8 per 1M tokens) |
 
-**In short:** while the dot is green, continue the conversation. If you need a long break, start fresh with `/clear` or `/compact` afterwards, because the next message pays the rewrite price.
+**In short:** while the dot is green, continue the conversation. After a long break, the next message pays the rewrite price. If you no longer need the old conversation, run `/clear` first and start fresh at almost no cost.
 
 ## Install
 
