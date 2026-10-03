@@ -1,0 +1,16 @@
+{
+  "name": "session-pulse",
+  "owner": { "name": "Mejba Ahmed", "url": "https://github.com/mejba13" },
+  "metadata": {
+    "description": "Session Pulse for Claude Code: see cache, context, limits and cost at a glance"
+  },
+  "plugins": [
+    {
+      "name": "session-pulse",
+      "source": "./plugins/session-pulse",
+      "description": "Live band above the prompt: prompt-cache countdown, context fill, re-cache cost, 5h/weekly limits and session cost",
+      "version": "1.0.0",
+      "category": "productivity"
+    }
+  ]
+}

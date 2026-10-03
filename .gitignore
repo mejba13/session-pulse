@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+# Written by Claude Code on every load
+.claude-plugin/types/
+plugins/*/.claude-plugin/types/
+plugins/*/tsconfig.json
