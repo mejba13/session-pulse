@@ -14,6 +14,23 @@
 
 Values change colour as they rise: green below 60%, yellow from 60%, red from 85%.
 
+### What "cache warm 56m" means
+
+Every message you send makes Claude read the whole conversation again. To make that cheap, Anthropic keeps the conversation in a short-term memory called the **prompt cache**.
+
+- **Warm cache:** Claude reads the conversation from memory. It is fast and costs about a tenth of the normal price or less.
+- **56m:** you have 56 minutes to send your next message before the memory is cleared. Each reply from Claude resets the timer to the full time, 1 hour by default.
+- **Cold cache:** after the timer runs out, the next message must write the whole conversation to memory again. That is the `rewrite` figure.
+
+With the numbers in the screenshot (216k tokens on Opus 5.5):
+
+| You reply... | Cache | Cost to re-read the conversation |
+|---|---|---|
+| within 56 minutes | warm | about $0.04 (cache read, $0.20 per 1M tokens) |
+| after 56 minutes | cold | about $1.73 (cache write, $8 per 1M tokens) |
+
+**In short:** while the dot is green, continue the conversation. If you need a long break, start fresh with `/clear` or `/compact` afterwards, because the next message pays the rewrite price.
+
 ## Install
 
 In Claude Code:
