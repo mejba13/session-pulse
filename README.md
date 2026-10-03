@@ -2,17 +2,15 @@
 
 **See your Claude Code session at a glance.** Session Pulse adds one live line above the prompt with the numbers that decide what your next message costs.
 
-```
-● cache warm 59m │ ctx 109k/1M 11% │ rewrite ≈ $0.87 │ 5h 10% ↻3h12m · week 59% ↻4d │ session $1.01 · 42m
-```
+![Session Pulse showing cache warm 56m, ctx 216k of 1.0M (22%), rewrite about $1.73, 5h limit 2%, week limit 0%, session $3.79 after 16 minutes](assets/session-pulse-terminal.png)
 
 | Segment | What it tells you |
 |---|---|
-| `● cache warm 59m` | Time left before the prompt cache expires. Turns yellow near the end and red (`○ cache cold`) once it has expired. |
-| `ctx 109k/1M 11%` | How much of the context window the conversation fills. |
-| `rewrite ≈ $0.87` | Roughly what it costs to write the current context to the cache again once it goes cold. |
-| `5h 10% · week 59%` | Your subscription's rate-limit use, with the time until each window resets (`↻`). |
-| `session $1.01 · 42m` | What this session has cost so far, and how long it has run. |
+| `● cache warm 56m` | Time left before the prompt cache expires. Turns yellow near the end and red (`○ cache cold`) once it has expired. |
+| `ctx 216k/1.0M 22%` | How much of the context window the conversation fills. |
+| `rewrite ≈ $1.73` | Roughly what it costs to write the current context to the cache again once it goes cold. |
+| `5h 2% · week 0%` | Your subscription's rate-limit use, with the time until each window resets (`↻`). |
+| `session $3.79 · 16m` | What this session has cost so far, and how long it has run. |
 
 Values change colour as they rise: green below 60%, yellow from 60%, red from 85%.
 
